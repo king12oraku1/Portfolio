@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Akinnukawe Israel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .services-hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(ellipse at top left, rgba(56, 189, 248, 0.06) 0%, transparent 50%);
+      padding-top: 80px;
+    }
+    .pricing-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      transition: all 0.4s ease;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .pricing-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    .pricing-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.1);
+    }
+    .pricing-card.featured::before {
+      content: 'Popular';
+      position: absolute;
+      top: 20px;
+      right: -35px;
+      background: var(--accent);
+      color: var(--bg-primary);
+      padding: 0.25rem 3rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      transform: rotate(45deg);
+    }
+    .price {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+    .process-number {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      color: var(--bg-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .process-line {
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      z-index: 1;
+    }
+    @media (max-width: 991px) {
+      .process-line { display: none; }
+    }
+    .check-list li {
+      list-style: none;
+      padding: 0.5rem 0;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list li i {
+      color: var(--accent);
+      margin-right: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Israel<span></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="review.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section 1: Services Hero -->
+  <section class="services-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 animate-on-scroll">
+          <div class="badge-cyan mb-3 d-inline-block">What I Offer</div>
+          <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem;">My <span style="color: var(--accent);">Services</span></h1>
+          <p class="lead" style="color: var(--text-secondary); max-width: 600px;">
+            From concept to deployment, I provide comprehensive frontend solutions tailored to your business needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Service Cards -->
+  <section class="py-5 my-5">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Development Services</h2>
+        <p>Specialized solutions for modern web challenges.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 animate-on-scroll stagger-1">
+          <div class="glass-card h-100">
+            <div class="service-icon"><i class="bi bi-laptop"></i></div>
+            <h4>Responsive Web Design</h4>
+            <p style="color: var(--text-secondary);">Mobile-first websites that look stunning on every device, from phones to desktops, using modern CSS techniques.</p>
+            <ul class="list-unstyled mt-3" style="color: var(--text-secondary); font-size: 0.9rem;">
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Mobile Optimization</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Cross-browser Testing</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Performance Tuning</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll stagger-2">
+          <div class="glass-card h-100">
+            <div class="service-icon"><i class="bi bi-bootstrap"></i></div>
+            <h4>Bootstrap Development</h4>
+            <p style="color: var(--text-secondary);">Custom Bootstrap themes and components that maintain consistency while standing out from generic templates.</p>
+            <ul class="list-unstyled mt-3" style="color: var(--text-secondary); font-size: 0.9rem;">
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Custom Components</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Theme Customization</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Grid Systems</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll stagger-3">
+          <div class="glass-card h-100">
+            <div class="service-icon"><i class="bi bi-filetype-js"></i></div>
+            <h4>Interactive Development</h4>
+            <p style="color: var(--text-secondary);">Dynamic user experiences with JavaScript animations, form validation.</p>
+            <ul class="list-unstyled mt-3" style="color: var(--text-secondary); font-size: 0.9rem;">
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Dynamic Interactions</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Responsive Design</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Up To Date Design</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll stagger-1">
+          <div class="glass-card h-100">
+            <div class="service-icon"><i class="bi bi-shop"></i></div>
+            <h4>Landing Pages</h4>
+            <p style="color: var(--text-secondary);">High-converting landing pages optimized for lead generation and marketing campaigns.</p>
+            <ul class="list-unstyled mt-3" style="color: var(--text-secondary); font-size: 0.9rem;">
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> CTA Optimization</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> A/B Ready</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Fast Loading</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll stagger-2">
+          <div class="glass-card h-100">
+            <div class="service-icon"><i class="bi bi-arrow-repeat"></i></div>
+            <h4>Website Redesign</h4>
+            <p style="color: var(--text-secondary);">Modernize outdated websites with fresh designs while preserving SEO value and content.</p>
+            <ul class="list-unstyled mt-3" style="color: var(--text-secondary); font-size: 0.9rem;">
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Content Migration</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Modern Stack</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 animate-on-scroll stagger-3">
+          <div class="glass-card h-100">
+            <div class="service-icon"><i class="bi bi-wrench"></i></div>
+            <h4>Maintenance & Support</h4>
+            <p style="color: var(--text-secondary);">Ongoing website maintenance, bug fixes, content updates, and performance monitoring.</p>
+            <ul class="list-unstyled mt-3" style="color: var(--text-secondary); font-size: 0.9rem;">
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Monthly Updates</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> Security Patches</li>
+              <li><i class="bi bi-check2" style="color: var(--accent);"></i> 24/7 Support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Pricing -->
+  <section class="py-5 my-5">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Pricing Packages</h2>
+        <p>Transparent pricing for quality work.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 animate-on-scroll stagger-1">
+          <div class="pricing-card text-center">
+            <h4 style="color: var(--text-secondary);">Starter</h4>
+            <div class="price my-3">TBD</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Perfect for small projects</p>
+            <ul class="check-list text-start mt-4 mb-4">
+              <li><i class="bi bi-check-lg"></i> 1-3 Pages</li>
+              <li><i class="bi bi-check-lg"></i> Mobile Responsive</li>
+              <li><i class="bi bi-check-lg"></i> Basic SEO</li>
+              <li><i class="bi bi-check-lg"></i> Contact Form</li>
+              <li><i class="bi bi-check-lg"></i> 1 Revision</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-cyan w-100">Get Started</a>
+          </div>
+        </div>
+        <div class="col-md-4 animate-on-scroll stagger-2">
+          <div class="pricing-card featured text-center">
+            <h4 style="color: var(--accent);">Professional</h4>
+            <div class="price my-3">TBD</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Best for growing businesses</p>
+            <ul class="check-list text-start mt-4 mb-4">
+              <li><i class="bi bi-check-lg"></i> 5-7 Pages</li>
+              <li><i class="bi bi-check-lg"></i> Custom Animations</li>
+              <li><i class="bi bi-check-lg"></i> Advanced SEO</li>
+              <li><i class="bi bi-check-lg"></i> Blog Setup</li>
+              <li><i class="bi bi-check-lg"></i> 3 Revisions</li>
+              <li><i class="bi bi-check-lg"></i> Social Integration</li>
+            </ul>
+            <a href="contact.html" class="btn btn-cyan w-100">Get Started</a>
+          </div>
+        </div>
+        <div class="col-md-4 animate-on-scroll stagger-3">
+          <div class="pricing-card text-center">
+            <h4 style="color: var(--text-secondary);">Enterprise</h4>
+            <div class="price my-3">TBD</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Full-scale solutions</p>
+            <ul class="check-list text-start mt-4 mb-4">
+              <li><i class="bi bi-check-lg"></i> Unlimited Pages</li>
+              <li><i class="bi bi-check-lg"></i> Custom Features</li>
+              <li><i class="bi bi-check-lg"></i> E-commerce Ready</li>
+              <li><i class="bi bi-check-lg"></i> Admin Dashboard</li>
+              <li><i class="bi bi-check-lg"></i> Unlimited Revisions</li>
+              <li><i class="bi bi-check-lg"></i> Priority Support</li>
+            </ul>
+            <a href="contact.html" class="btn btn-outline-cyan w-100">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Process -->
+  <section class="py-5 my-5">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>My Process</h2>
+        <p>How I turn your ideas into reality.</p>
+      </div>
+      <div class="row g-4 position-relative">
+        <div class="col-md-6 col-lg-3 animate-on-scroll stagger-1">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <h5>Discovery</h5>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Understanding your goals, audience, and project requirements through detailed consultation.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 animate-on-scroll stagger-2">
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <h5>Design</h5>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Creating wireframes and mockups that align with your brand identity and user expectations.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 animate-on-scroll stagger-3">
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <h5>Development</h5>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Writing clean, efficient code with modern technologies and best practices.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 animate-on-scroll stagger-4">
+          <div class="process-step">
+            <div class="process-number">4</div>
+            <h5>Launch</h5>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Testing, deployment, and post-launch support to ensure everything runs smoothly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: CTA -->
+  <section class="py-5 my-5">
+    <div class="container">
+      <div class="glass-card text-center py-5 animate-on-scroll scale-in" style="background: linear-gradient(135deg, rgba(56,189,248,0.1), rgba(6,182,212,0.05));">
+        <h2 class="mb-3" style="font-weight: 800;">Need a Custom Solution?</h2>
+        <p class="mb-4" style="color: var(--text-secondary);">Let's discuss your specific requirements and create something unique.</p>
+        <a href="contact.html" class="btn btn-cyan btn-lg">Let's Talk <i class="bi bi-chat-dots ms-2"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <h5 style="font-weight: 700;">Akinnukawe Israel</h5>
+          <p class="mb-0" style="color: var(--text-secondary); font-size: 0.9rem;">Frontend Developer in Training</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="https://github.com/king12oraku1" class="social-link"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/israel-akinnukawe-5947b13b0
+          " class="social-link"><i class="bi bi-linkedin"></i></a>
+          <a href="https://twitter.com/akinnukawe77743" class="social-link"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://instagram.com/israel._ololade" class="social-link"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com/share/1ZvUcsH8m3/" class="social-link"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <hr style="border-color: var(--border); margin: 2rem 0;">
+      <div class="text-center" style="color: var(--text-secondary); font-size: 0.85rem;">
+        <p class="mb-0">&copy; 2026 Akinnukawe Israel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

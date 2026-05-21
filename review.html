@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews | Akinnukawe Israel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .review-hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      padding-top: 90px;
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 32%),
+                  radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.06), transparent 28%);
+    }
+    .review-hero .hero-copy {
+      max-width: 700px;
+    }
+    .review-hero h1 {
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 1rem;
+    }
+    .review-hero p {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+    .review-hero .btn-group {
+      gap: 1rem;
+    }
+    .review-hero .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--accent);
+      padding: 0.75rem 1rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .testimonial-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--card-bg), var(--bg-secondary));
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .testimonial-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      min-height: 100%;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+    }
+    .testimonial-card .quote-icon {
+      font-size: 2rem;
+      color: var(--accent);
+      opacity: 0.35;
+      line-height: 1;
+    }
+    .testimonial-card p {
+      color: var(--text-secondary);
+      margin: 1.25rem 0 1.5rem;
+    }
+    .testimonial-card .client-name {
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+    .testimonial-card .client-role {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .review-grid {
+      gap: 1.5rem;
+    }
+    .review-metrics .metric-card {
+      padding: 1.75rem;
+      border-radius: 20px;
+    }
+    .review-metrics .metric-card h3 {
+      font-size: 2.5rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .review-metrics .metric-card p {
+      color: var(--text-secondary);
+    }
+    .review-cta-card {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      border-radius: 24px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .review-cta-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.18);
+      transform: translateY(-6px);
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      
+    }
+    .review-cta-card h3 {
+      margin-bottom: 1rem;
+    }
+    .review-cta-card p {
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+    }
+    .review-badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 0.7rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Israel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="review.html">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="review-hero" style="padding-top: 140px; padding-bottom: 125px;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7 hero-copy">
+          <span class="hero-badge">Trusted Reviews</span>
+          <h1>Hire me, then share your experience.</h1>
+          <p>Professional websites built with clean design, polished interactions, and fast delivery. See what clients say and let’s start your next project together.</p>
+          <div class="d-flex flex-wrap btn-group" style="padding-top: 20px;">
+            <a href="contact.html" class="btn btn-cyan">Hire Me</a>
+            <a href="contact.html" class="btn btn-outline-cyan">Share Your Review</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="py-5">
+    <div class="container">
+      <div class="section-header">
+        <h2>Client Feedback</h2>
+        <p>Real reviews from clients who trusted me with their websites, brands, and digital experiences.</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 review-grid">
+        <div class="col">
+          <div class="testimonial-card">
+            <div class="d-flex align-items-center mb-3">
+              <div class="testimonial-img"><i class="bi bi-person-circle"></i></div>
+              <div class="ms-3">
+                <div class="client-name">Maria Johnson</div>
+                <div class="client-role">Startup Founder</div>
+              </div>
+            </div>
+            <i class="bi bi-quote quote-icon"></i>
+            <p>“Israel delivered a polished website fast, with excellent communication and a modern design that helped our business stand out.”</p>
+            <div class="client-role">Web Application / UI Improvement</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="testimonial-card">
+            <div class="d-flex align-items-center mb-3">
+              <div class="testimonial-img"><i class="bi bi-person-circle"></i></div>
+              <div class="ms-3">
+                <div class="client-name">David Akande</div>
+                <div class="client-role">E-commerce Owner</div>
+              </div>
+            </div>
+            <i class="bi bi-quote quote-icon"></i>
+            <p>“The final website felt premium, and Israel turned our branding into a user-friendly online store with strong conversions.”</p>
+            <div class="client-role">E-commerce Website</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="testimonial-card">
+            <div class="d-flex align-items-center mb-3">
+              <div class="testimonial-img"><i class="bi bi-person-circle"></i></div>
+              <div class="ms-3">
+                <div class="client-name">Fatima Bello</div>
+                <div class="client-role">Marketing Lead</div>
+              </div>
+            </div>
+            <i class="bi bi-quote quote-icon"></i>
+            <p>“Professional, responsive, and detail-driven. The site launch was smoother than I expected, and the support afterward was excellent.”</p>
+            <div class="client-role">Brand Website</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="py-5">
+    <div class="container">
+      <div class="row g-4 review-metrics">
+        <div class="col-md-4">
+          <div class="metric-card glass-card text-center">
+            <h3>4.9 / 5</h3>
+            <p>Average rating from client feedback</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="metric-card glass-card text-center">
+            <h3>20+</h3>
+            <p>Website launches and user-focused projects</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="metric-card glass-card text-center">
+            <h3>100%</h3>
+            <p>Project satisfaction score from collaboration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="py-5">
+    <div class="container" style=" padding-bottom: 20px;">
+      <div class="review-cta-card mx-auto" style="max-width: 780px; border: 1px solid rgba(56, 189, 248, 0.18); box-shadow: 0 12px 30px rgba(56, 189, 248, 0.1);">
+        <span class="review-badge">Ready to collaborate?</span>
+        <h3>Let’s turn your ideas into a website that earns praise.</h3>
+        <p>If you loved the work, share a review after your project completes. If you want a professional website now, send a message and I’ll take it from there.</p>
+        <a href="contact.html" class="btn btn-cyan">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <h5 style="font-weight: 700;">Akinnukawe Israel</h5>
+          <p class="mb-0" style="color: var(--text-secondary); font-size: 0.9rem;">Frontend Developer in Training</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="https://github.com/king12oraku1" class="social-link"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/israel-akinnukawe-5947b13b0" class="social-link"><i class="bi bi-linkedin"></i></a>
+          <a href="https://twitter.com/akinnukawe77743" class="social-link"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://instagram.com/israel._ololade" class="social-link"><i class="bi bi-instagram"></i></a>
+          <a href="https://facebook.com/share/1ZvUcsH8m3/" class="social-link"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+      <hr style="border-color: var(--border); margin: 2rem 0;">
+      <div class="text-center" style="color: var(--text-secondary); font-size: 0.85rem;">
+        <p class="mb-0">&copy; 2026 Akinnukawe Israel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
